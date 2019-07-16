@@ -1,38 +1,31 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmit": false,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "noImplicitAny": false,
-    "experimentalDecorators": true,
+    "downlevelIteration": true,
     "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
-      "es5",
-      "es6",
+      "es2018",
       "dom"
     ],
-    "typeRoots" : [
-      "./node_modules/@types"
-    ],
-    "types": [
-      "jasmine",
-      "karma",
-      "node",
-      "webpack",
-      "webpack-env"
-    ]
-  },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "src/**/*.spec.ts",
-    "./tmp",
-    "node_modules",
-    "demo",
-    "dist"
-  ]
+    "paths": {
+      "angular-querybuilder": [
+        "dist/angular-querybuilder"
+      ],
+      "angular-querybuilder/*": [
+        "dist/angular-querybuilder/*"
+      ]
+    }
+  }
 }

@@ -24,5 +24,4 @@ coverage/
 dist
 docs
 tmp
-lib
 .ignore
